@@ -51,7 +51,6 @@
 //Якщо користувач вводить "adminPassword", то вивести у консоль рядок "Hello!"
 //Якщо користувач вводить щось відмінне від "adminPassword", то вивести рядок "Goodbye!"
 
-
 // const login = prompt("Hello, please enter your login!");
 
 // let message;
@@ -67,7 +66,7 @@
 //             case null:
 //                 message = "Authorization has been cancelled";
 //                 break;
-            
+
 //             case "adminPassword":
 //                 message = "Hello!";
 //                 break;
@@ -77,7 +76,6 @@
 //             break;
 //         }
 //         break;
-    
 
 //     default:
 //         message = "Goodbye!";
@@ -85,3 +83,51 @@
 // }
 
 // console.log(message);
+
+// 8. При завантаженні сторінки користувачу у prompt пропонується ввести число від 0 до 59 'Hello, enter please the number between  0 and 59'.
+//Зроби перевірку на відповідність введеного числа вказаному діапазону (0-59). Якщо число не відповідає виведіть
+//alert з повідомленням "The [number] is outside 0 and 59"
+// Визначте в яку чверть години попаде
+// це число(в першу, другу, третю чи четверту) та виведіть це повідомлення у консоль, наприклад, "Number [number] refers to 2 quarters".
+
+// const number = prompt("Hello, enter please the number between  0 and 59");
+// if (number < 0 || number > 59) {
+//   alert(`The ${number} is outside 0 and 59`);
+// } else if (number >= 0 && number <= 14) {
+//   console.log(`The ${number} refers to 1 quarters`);
+// } else if (number >= 15 && number <= 29) {
+//   console.log(`The ${number} refers to 2 quarters`);
+// } else if (number >= 30 && number <= 44) {
+//   console.log(`The ${number} refers to 3 quarters`);
+// } else if (number >= 45 && number <= 59) {
+//   console.log(`The ${number} refers to 4 quarters`);
+// }
+
+const getMessage = (number, quarter) => {
+  return `Number ${number} refers to ${quarter} quarters`;
+};
+
+const number = prompt("Hello, enter please the number between  0 and 59");
+if (Number(number) === 60) {
+  alert(`The ${number} is outside 0 and 59`);
+} else {
+  const quarter =
+    Number(number) === 0 ? Number(number) : Math.floor((number - 1) / 15);
+  switch (quarter) {
+    case 0:
+      alert(getMessage(number, 1));
+      break;
+    case 1:
+      alert(getMessage(number, 2));
+      break;
+    case 2:
+      alert(getMessage(number, 3));
+      break;
+    case 3:
+      alert(getMessage(number, 4));
+      break;
+    default:
+      alert(`The ${number} is outside 0 and 59`);
+      break;
+  }
+}
