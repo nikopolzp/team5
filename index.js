@@ -37,3 +37,51 @@
 //     console.log(i);
 //   }
 // }
+
+//======================================5 task======================================================//
+
+//5. Напишіть код, який буде запитувати логін за допомогою prompt "Hello, please enter your login!"
+// і виводити результат у консоль браузера
+//Якщо під час вводу login нажали клавішу Esc, то вивести у консоль рядок "Authorization has been cancelled"
+//Якщо користувач вводить "admin", то prompt запитує пароль (Please enter your password)
+//Якщо користувач вводить щось відмінне від "admin", то вивести рядок "Goodbye!"
+
+//Пароль перевіряти так:
+//Якщо нажали клавішу Esc, то вивести у консоль рядок "Authorization has been cancelled"
+//Якщо користувач вводить "adminPassword", то вивести у консоль рядок "Hello!"
+//Якщо користувач вводить щось відмінне від "adminPassword", то вивести рядок "Goodbye!"
+
+
+// const login = prompt("Hello, please enter your login!");
+
+// let message;
+
+// switch (login) {
+//   case null:
+//     message = "Authorization has been cancelled";
+//     break;
+
+//   case "admin":
+//         const pass = prompt("Please enter your password");
+//         switch (pass) {
+//             case null:
+//                 message = "Authorization has been cancelled";
+//                 break;
+            
+//             case "adminPassword":
+//                 message = "Hello!";
+//                 break;
+
+//             default:
+//                 message = "Goodbye!";
+//             break;
+//         }
+//         break;
+    
+
+//     default:
+//         message = "Goodbye!";
+//     break;
+// }
+
+// console.log(message);
