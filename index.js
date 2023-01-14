@@ -103,31 +103,41 @@
 //   console.log(`The ${number} refers to 4 quarters`);
 // }
 
-const getMessage = (number, quarter) => {
-  return `Number ${number} refers to ${quarter} quarters`;
-};
+// const getMessage = (number, quarter) => {
+//   return `Number ${number} refers to ${quarter} quarters`;
+// };
 
-const number = prompt("Hello, enter please the number between  0 and 59");
-if (Number(number) === 60) {
-  alert(`The ${number} is outside 0 and 59`);
-} else {
-  const quarter =
-    Number(number) === 0 ? Number(number) : Math.floor((number - 1) / 15);
-  switch (quarter) {
-    case 0:
-      alert(getMessage(number, 1));
-      break;
-    case 1:
-      alert(getMessage(number, 2));
-      break;
-    case 2:
-      alert(getMessage(number, 3));
-      break;
-    case 3:
-      alert(getMessage(number, 4));
-      break;
-    default:
-      alert(`The ${number} is outside 0 and 59`);
-      break;
-  }
-}
+// const number = prompt("Hello, enter please the number between  0 and 59");
+// if (Number(number) === 60) {
+//   alert(`The ${number} is outside 0 and 59`);
+// } else {
+//   const quarter =
+//     Number(number) === 0 ? Number(number) : Math.floor((number - 1) / 15);
+//   switch (quarter) {
+//     case 0:
+//       alert(getMessage(number, 1));
+//       break;
+//     case 1:
+//       alert(getMessage(number, 2));
+//       break;
+//     case 2:
+//       alert(getMessage(number, 3));
+//       break;
+//     case 3:
+//       alert(getMessage(number, 4));
+//       break;
+//     default:
+//       alert(`The ${number} is outside 0 and 59`);
+//       break;
+//   }
+// }
+
+//9. Дано рядок, що складається із символів, наприклад, 'a1abcde'.
+// Перевір, що першим символом цього рядка є літера 'a'.
+// Якщо так - виведи 'yes' у консоль, в противному випадку виведи 'no'.
+
+// const word = 'a1abcde';
+// word[0] === "a" ? console.log("yes") : console.log("no");
+
+// const word = "a1abcde";
+// word.startsWith(`a1a`) ? console.log("yes") : console.log("no");
