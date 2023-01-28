@@ -180,8 +180,9 @@ const salaries = {
 
 function getTotalSalary(salaries) {
   let summ = 0;
-  for (const salarie of salaries) {
-    return (summ += salarie);
+  for (const salarie of Object.values(salaries)) {
+    summ += salarie;
   }
+  return summ;
 }
-console.log(salaries);
+console.log(getTotalSalary(salaries));
