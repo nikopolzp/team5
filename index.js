@@ -252,3 +252,20 @@
 //     return newObj;
 // }
 // console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b'))
+
+//6. Напишіть функцію updateObject, яка приймає об'єкт та перелік ключів
+//і повертає новий об'єкт без вказаних властивостей
+//Очікуваний результат ({ a: 1, b: 2, c: 3 }, 'b', 'c') => {a: 1}
+
+// function updateObject(obj, ...removedKeys) {
+
+//     const newObj = { };
+//     for (const key in obj) {
+        
+//         if (!removedKeys.includes(key)) {
+//             newObj[key] = obj[key];
+//         }
+//     }
+//     return newObj;
+// }
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, "b", "c"));
