@@ -169,3 +169,19 @@
 // for (let key of keys) {
 //   console.log(`${key}: ${user[key]}`);
 // }
+
+//2. Є об'єкт, в якому зберігаються зарплати команди. Напишіть функцію getTotalSalary, яка буде повертати загальну суму зарплат. Якщо об'єкт пустий, то функція має повернути 0
+
+const salaries = {
+  mango: 100,
+  poly: 160,
+  ajax: 1470,
+};
+
+function getTotalSalary(salaries) {
+  let summ = 0;
+  for (const salarie of salaries) {
+    return (summ += salarie);
+  }
+}
+console.log(salaries);
