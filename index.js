@@ -232,3 +232,23 @@
 
 // calculator.read(2, '5asd')
 // console.log(calculator.mult())
+
+// 5. Напишіть функцію updateObject, яка приймає об'єкт та ключ
+//і повертає новий об'єкт без вказаної властивості
+//Очікуваний результат ({ a: 1, b: 2, c: 3 }, 'b') => {a: 1, c: 3}
+//
+// function updateObject(obj, removedKey) {
+
+//     // const nevObj = { ...obj };
+//     // delete nevObj[key];
+    
+//     const newObj = { };
+//     for (const key in obj) {
+//         if (key !== removedKey) {
+//           console.log(key)
+//             newObj[key] = obj[key];
+//         }
+//     }
+//     return newObj;
+// }
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b'))
