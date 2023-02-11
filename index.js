@@ -392,3 +392,41 @@
 
 // const yaroslav = new User({ userName: "yaroslav", age: 28, numbersOfPost: 5 });
 // console.log(yaroslav.getInfo());
+
+
+// 10. Напиши функцию конструктор Storage который создаёт объекты
+//для управления складом товаров.
+//При вызове будет получать один агрумент - начальный массив товаров,
+//и записывать его в свойство items.
+//Добавь методы класса:
+//getItems() - возвращайте массив товаров
+//addItems(item) - получает новый товар и добавляет его к текущим
+//removeItem(item) - плучает товар и, если он есть, удаляет его из текущих
+
+// const Storage = function (array) {
+//     this.items = array;
+// }
+
+// Storage.prototype.getItems = function () {
+//     return this.items;
+// }
+
+// Storage.prototype.addItems = function (newProduct) {
+//     this.items.push(newProduct);
+// }
+
+// Storage.prototype.removeItem = function (remProduct) {
+//     if (this.items.includes(remProduct)) {
+//         const index = this.items.indexOf(remProduct)
+//       this.items.splice(index, 1)
+//   }
+// };
+
+// const storage = new Storage(['apple', 'banana', 'mango'])
+// console.log(storage.getItems());
+// storage.addItems('orange');
+// console.log(storage.getItems());
+// storage.removeItem('banana');
+// console.log(storage.getItems());
+
+
