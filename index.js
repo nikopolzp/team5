@@ -341,11 +341,34 @@
 //якого будуть результати виклику callback.
 //callback функція має множити елементи на 2
 
-function each(array, callback) {
-  return array.map((element) => callback(element));
-}
-function mult(element) {
-  return element * 2;
-}
+// function each(array, callback) {
+//   return array.map((element) => callback(element));
+// }
+// function mult(element) {
+//   return element * 2;
+// }
 
-console.log(each([1, 5, 10, 25], mult));
+// console.log(each([1, 5, 10, 25], mult));
+
+
+// 7. Напишіть функцію makeCounter, яка повертає іншу
+//функцію, яка лічить і виводе в консоль кількість своїх викликів
+
+// function makeCounter() {
+//     let total = 0;
+//     return function count() {
+//         console.log(total +=1)
+//     }
+// }
+
+// const count1 = makeCounter();
+
+// count1();
+// count1();
+// count1();
+// count1();
+// count1();
+
+// const count2 = makeCounter();
+
+// count2();
