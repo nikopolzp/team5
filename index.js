@@ -350,7 +350,6 @@
 
 // console.log(each([1, 5, 10, 25], mult));
 
-
 // 7. Напишіть функцію makeCounter, яка повертає іншу
 //функцію, яка лічить і виводе в консоль кількість своїх викликів
 
@@ -372,3 +371,24 @@
 // const count2 = makeCounter();
 
 // count2();
+
+// 10. Напиши функцию конструктор User для создания пользователя со следующими свойствами
+//a. userName - имя, строка
+//b. age - возраст, число
+//c. numbersOfPost - количество постов, число
+//d. класс ожидает 1 параметр - объект настроек с одноименными свойствами
+
+//Добавь метод getInfo(), который возвращает строку:
+//`Пользователю ${} ${} лет и у него ${} публикаций.`
+
+// const User = function ({ userName, age, numbersOfPost }) {
+//   this.userName = userName;
+//   this.age = age;
+//   this.numbersOfPost = numbersOfPost;
+//   this.getInfo = function () {
+//     return `Пользователю ${this.userName} ${this.age} лет и у него ${this.numbersOfPost} публикаций.`;
+//   };
+// };
+
+// const yaroslav = new User({ userName: "yaroslav", age: 28, numbersOfPost: 5 });
+// console.log(yaroslav.getInfo());
