@@ -187,7 +187,6 @@
 // }
 // console.log(getTotalSalary(salaries));
 
-
 //3. Напишіть фукцію calcTotalPrice(stones, stonesName),
 //яка приймає масив об'єктів і рядок з назвою каменю.
 //Функція обчислює і повертає загальну вартість каменів з таким іменем
@@ -241,7 +240,7 @@
 
 //     // const nevObj = { ...obj };
 //     // delete nevObj[key];
-    
+
 //     const newObj = { };
 //     for (const key in obj) {
 //         if (key !== removedKey) {
@@ -261,7 +260,7 @@
 
 //     const newObj = { };
 //     for (const key in obj) {
-        
+
 //         if (!removedKeys.includes(key)) {
 //             newObj[key] = obj[key];
 //         }
@@ -270,21 +269,44 @@
 // }
 // console.log(updateObject({ a: 1, b: 2, c: 3 }, "b", "c"));
 
-
 // 3. Напишіть функцію makeShef(shefName), яка повертає функцію
 //makeDish(dish), яка памятає ім'я шефа під час її виклику
 //Функція makeDish має логіровать "<shef> is cooking <dish>"
 
-function makeShef(shefName) {
-    function makeDish(dish) {
-     console.log(`${shefName} is cooking ${dish}`)
- }
-    return makeDish
-}
+// function makeShef(shefName) {
+//     function makeDish(dish) {
+//      console.log(`${shefName} is cooking ${dish}`)
+//  }
+//     return makeDish
+// }
 
-makeShef('Poly')('fish')
-const poly = makeShef('Poly')
+// makeShef('Poly')('fish')
+// const poly = makeShef('Poly')
 
-poly('pizza')
-poly('pasta')
+// poly('pizza')
+// poly('pasta')
 
+// 02.
+// 2. Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товару, а також callback.
+//Функція створює об'єкт товару, додаючи йому унікальний
+//ідентіфікатор у властивість id та викликає callback
+//передаючи йому створений об'єкт.
+//showProduct(product) - коллбек, що приймає об'єкт
+//продукта і логірує його в консоль
+
+// function makeProduct(name, price, callback) {
+//   const product = {
+//     name,
+//     price,
+//     id: Math.random(),
+//   };
+//   callback(product);
+// }
+
+// function showProduct(product) {
+//   console.log(product);
+// }
+
+// makeProduct("Vasya", 100, showProduct);
