@@ -269,3 +269,22 @@
 //     return newObj;
 // }
 // console.log(updateObject({ a: 1, b: 2, c: 3 }, "b", "c"));
+
+
+// 3. Напишіть функцію makeShef(shefName), яка повертає функцію
+//makeDish(dish), яка памятає ім'я шефа під час її виклику
+//Функція makeDish має логіровать "<shef> is cooking <dish>"
+
+function makeShef(shefName) {
+    function makeDish(dish) {
+     console.log(`${shefName} is cooking ${dish}`)
+ }
+    return makeDish
+}
+
+makeShef('Poly')('fish')
+const poly = makeShef('Poly')
+
+poly('pizza')
+poly('pasta')
+
