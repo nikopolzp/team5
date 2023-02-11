@@ -310,3 +310,29 @@
 // }
 
 // makeProduct("Vasya", 100, showProduct);
+
+// // 4. Виправте помилки, щоб код працював
+// const product = {
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
+// product.showPrice();
+
+
+
+
+// 5. Виправте код, щоб він працював
+// function callAction(action) {
+//     action()
+// }
+
+// const item = {
+//     getQuantity() {
+//         console.log(this.quantity);
+//     },
+//     quantity: 5,
+// }
+
+// callAction(item.getQuantity.bind(item));
