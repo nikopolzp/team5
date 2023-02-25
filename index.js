@@ -496,3 +496,25 @@
 Задача 4
 Кнопка "Decrease" робить квадрат меньше на 10 пікселів, кпопка "Increase" - більше на 10 пикселів.
 */
+
+const refs = {
+  increase: document.querySelector("[data-type='increase']"),
+  decrease: document.querySelector("[data-type='decrease']"),
+  box: document.querySelector("#box"),
+};
+
+refs.increase.addEventListener("click", increaseButton);
+refs.decrease.addEventListener("click", decreaseButton);
+
+function increaseButton(e) {
+  let boxWidth = refs.box.offsetWidth;
+
+  refs.box.style.width = `${boxWidth + 10}px`;
+  refs.box.style.height = `${boxWidth + 10}px`;
+}
+function decreaseButton(e) {
+  let boxWidth = refs.box.offsetWidth;
+
+  refs.box.style.width = `${boxWidth - 10}px`;
+  refs.box.style.height = `${boxWidth - 10}px`;
+}
