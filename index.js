@@ -435,3 +435,19 @@
 // poly('pasta')
 
 // ================================25.02.23==========================================================
+
+/*
+Задача 1
+Натискання на кнопку "SHOW ME" має виводити значення з поля введення (подивіться на елементи розмітки в html файлі)
+*/
+
+const refs = {
+    button: document.querySelector('#alertButton'),
+    input: document.querySelector('#alertInput')
+}
+
+refs.button.addEventListener('click', onButtonClick);
+
+function onButtonClick(evt) {
+    alert(refs.input.value)
+}
