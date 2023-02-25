@@ -441,13 +441,31 @@
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (подивіться на елементи розмітки в html файлі)
 */
 
-const refs = {
-    button: document.querySelector('#alertButton'),
-    input: document.querySelector('#alertInput')
-}
+// const refs = {
+//     button: document.querySelector('#alertButton'),
+//     input: document.querySelector('#alertInput')
+// }
 
-refs.button.addEventListener('click', onButtonClick);
+// refs.button.addEventListener('click', onButtonClick);
 
-function onButtonClick(evt) {
-    alert(refs.input.value)
-}
+// function onButtonClick(evt) {
+//     alert(refs.input.value)
+// }
+
+// =========================================================================================================
+// Задача 2
+// При натисканні на кнопку "SWAP ME" виконується обмін змісту між двома інпутами.
+// Можна нажимати на неї декілька разів або вручну змінити вміст інпутів. */
+// const refs = {
+//   button: document.querySelector("#swapButton"),
+//   inputLeft: document.querySelector("[data-type='left']"),
+//   inputRight: document.querySelector("[data-type='right']"),
+// };
+
+// refs.button.addEventListener("click", onButtonClick);
+
+// function onButtonClick() {
+//   const acc = refs.inputLeft.value;
+//   refs.inputLeft.value = refs.inputRight.value;
+//   refs.inputRight.value = acc;
+// }
