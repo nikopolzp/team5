@@ -393,7 +393,6 @@
 // const yaroslav = new User({ userName: "yaroslav", age: 28, numbersOfPost: 5 });
 // console.log(yaroslav.getInfo());
 
-
 // 10. Напиши функцию конструктор Storage который создаёт объекты
 //для управления складом товаров.
 //При вызове будет получать один агрумент - начальный массив товаров,
@@ -428,5 +427,6 @@
 // console.log(storage.getItems());
 // storage.removeItem('banana');
 // console.log(storage.getItems());
+
 
 
