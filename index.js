@@ -531,7 +531,6 @@
 //   // console.log(e.target===divPlaceEl); Не працює
 // });
 
-
 /*
 Задача 6
 По кліку на кнопку "Double" збільшіть значення
@@ -547,4 +546,27 @@
 
 // function onButtonClick(evt) {
 //   refs.listItem.forEach(item => item.textContent *= 2)
+// }
+
+// =================================================================
+/*
+Задача 9
+Удали из списка те элементы, которые отмечены.
+*/
+
+// const refs = {
+//   checkbox: document.querySelectorAll(".checkboxWrapper input"),
+//   form: document.querySelector("form"),
+// };
+
+// refs.form.addEventListener("submit", onButtonClick);
+
+// function onButtonClick(e) {
+//   e.preventDefault();
+
+//   refs.checkbox.forEach((item) => {
+//     if (item.checked) {
+//       item.closest(".checkboxWrapper").remove();
+//     }
+//   });
 // }
