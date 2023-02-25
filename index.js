@@ -497,24 +497,36 @@
 Кнопка "Decrease" робить квадрат меньше на 10 пікселів, кпопка "Increase" - більше на 10 пикселів.
 */
 
-const refs = {
-  increase: document.querySelector("[data-type='increase']"),
-  decrease: document.querySelector("[data-type='decrease']"),
-  box: document.querySelector("#box"),
-};
+// const refs = {
+//   increase: document.querySelector("[data-type='increase']"),
+//   decrease: document.querySelector("[data-type='decrease']"),
+//   box: document.querySelector("#box"),
+// };
 
-refs.increase.addEventListener("click", increaseButton);
-refs.decrease.addEventListener("click", decreaseButton);
+// refs.increase.addEventListener("click", increaseButton);
+// refs.decrease.addEventListener("click", decreaseButton);
 
-function increaseButton(e) {
-  let boxWidth = refs.box.offsetWidth;
+// function increaseButton(e) {
+//   let boxWidth = refs.box.offsetWidth;
 
-  refs.box.style.width = `${boxWidth + 10}px`;
-  refs.box.style.height = `${boxWidth + 10}px`;
-}
-function decreaseButton(e) {
-  let boxWidth = refs.box.offsetWidth;
+//   refs.box.style.width = `${boxWidth + 10}px`;
+//   refs.box.style.height = `${boxWidth + 10}px`;
+// }
+// function decreaseButton(e) {
+//   let boxWidth = refs.box.offsetWidth;
 
-  refs.box.style.width = `${boxWidth - 10}px`;
-  refs.box.style.height = `${boxWidth - 10}px`;
-}
+//   refs.box.style.width = `${boxWidth - 10}px`;
+//   refs.box.style.height = `${boxWidth - 10}px`;
+// }
+
+/*
+Задача 5
+Додайте слухача по кліку та визначте, коли клік відбувається
+в середині елемента з id "place" і коли клік відбувається поза зоною елемента
+*/
+
+const divPlaceEl = document.getElementById("place");
+window.addEventListener("click", (e) => {
+  console.log(divPlaceEl.contains(e.target)); 
+  // console.log(e.target===divPlaceEl); Не працює
+});
