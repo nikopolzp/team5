@@ -279,7 +279,6 @@
 //  }
 //     return makeDish
 // }
-<<<<<<< Updated upstream
 
 // makeShef('Poly')('fish')
 // const poly = makeShef('Poly')
@@ -429,12 +428,8 @@
 // storage.removeItem('banana');
 // console.log(storage.getItems());
 
-
-=======
-
 // makeShef('Poly')('fish')
 // const poly = makeShef('Poly')
->>>>>>> Stashed changes
 
 // poly('pizza')
 // poly('pasta')
