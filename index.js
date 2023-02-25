@@ -525,8 +525,26 @@
 в середині елемента з id "place" і коли клік відбувається поза зоною елемента
 */
 
-const divPlaceEl = document.getElementById("place");
-window.addEventListener("click", (e) => {
-  console.log(divPlaceEl.contains(e.target)); 
-  // console.log(e.target===divPlaceEl); Не працює
-});
+// const divPlaceEl = document.getElementById("place");
+// window.addEventListener("click", (e) => {
+//   console.log(divPlaceEl.contains(e.target));
+//   // console.log(e.target===divPlaceEl); Не працює
+// });
+
+
+/*
+Задача 6
+По кліку на кнопку "Double" збільшіть значення
+в кожному елементі списку у 2 рази
+*/
+
+// const refs = {
+//   button: document.querySelector('#double'),
+//   listItem: document.querySelectorAll('.listItem'),
+// }
+
+// refs.button.addEventListener('click', onButtonClick)
+
+// function onButtonClick(evt) {
+//   refs.listItem.forEach(item => item.textContent *= 2)
+// }
