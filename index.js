@@ -392,3 +392,4 @@
 
 // const yaroslav = new User({ userName: "yaroslav", age: 28, numbersOfPost: 5 });
 // console.log(yaroslav.getInfo());
+// ================================25.02.23==========================================================
