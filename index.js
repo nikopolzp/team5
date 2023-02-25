@@ -469,3 +469,26 @@
 //   refs.inputLeft.value = refs.inputRight.value;
 //   refs.inputRight.value = acc;
 // }
+
+
+/*
+Задача 3
+Кнопка "Hide" ховає текст (замість літер - зірочки) і заміняє назву кнопки на
+"Show", при повторному натисканні текст знову стає доступний (замість зірочок - літери) і кнопка приймає початковий вигляд.
+*/
+
+// const refs = {
+//   button: document.querySelector("#passwordButton"),
+//   input: document.querySelector("[data-target='passwordInput']"),
+// };
+
+// refs.button.addEventListener('click', (event) => {
+//     if (refs.input.type === 'text') {
+//         refs.input.type = "password"
+//         refs.button.textContent = "Show"
+//     } else {
+//         refs.input.type = "text";
+//         refs.button.textContent = "Hidden";
+//     }
+    
+// })
