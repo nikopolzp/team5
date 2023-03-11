@@ -641,13 +641,41 @@
  * через 2 секунди після виклику функції
  */
 
-function greet() {
-  new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-    resolve("hello world")
-  }, 2000)
-  }).then(ref => { console.log(ref); return ref }).then(console.log)
+// function greet() {
+//   new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve("hello world")
+//   }, 2000)
+//   }).then(ref => { console.log(ref); return ref }).then(console.log)
+// }
+
+// greet();
+
+/**
+ * ЗАДАЧА 2
+ * - Використовуй prompt і повертай результат його виклику.
+ * - Створи функцію, в середині якої буде проміс.
+ * Якщо значення не є числом, відклоняй проміс і логуй "error".
+ * Якщо значення парне, обробляй проміс і повертай рядок "even" через 1 секунду.
+ * Якщо значення не парне, обробляй проміс і повертай рядок "odd" через 2 секунди.
+ */
+const number = prompt("Please enter your number:");
+
+function checkEven(number) {
+  return new Promise((resolve, reject) => {
+    if (isNaN(number)) {
+      throw new Error("Error");
+    }
+    if (number % 2) {
+      setTimeout(() => {
+        resolve("Odd");
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        reject("Even");
+      }, 1000);
+    }
+  });
 }
 
-greet();
-
+checkEven(number).then(console.log).catch(console.log);
