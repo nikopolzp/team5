@@ -583,24 +583,44 @@
  */
 
 const refs = {
-    form: document.querySelector('#task-form'),
-    input: document.querySelector('input'),
-    button: document.querySelector('button'),
-    list: document.querySelector('#task-list'),
-}
+  form: document.querySelector("#task-form"),
+  input: document.querySelector("input"),
+  button: document.querySelector("button"),
+  list: document.querySelector("#task-list"),
+};
 
-refs.form.addEventListener('submit', onTaskFormSubmit)
+refs.form.addEventListener("submit", onTaskFormSubmit);
+refs.list.addEventListener("click", onDeteteClick);
+
+const userData = [];
 
 function onTaskFormSubmit(e) {
-    e.preventDefault();
-    const inputValue = e.currentTarget.elements.taskName.value;
-    console.log(e.currentTarget.elements.taskName.value)
+  e.preventDefault();
+  const inputValue = e.currentTarget.elements.taskName.value;
 
-    render(inputValue);
+  const id = Date.now();
+  const task = { id, text: inputValue };
+  render(inputValue, id);
+  userData.push(task);
+  localStorage.setItem("userData", JSON.stringify(userData));
+  e.target.reset();
 }
 
-function render(inputValue) {
-    const markup = `<li style="display:flex"><p>${inputValue}</p><button type="button">Delete</button></li>`
+function render(inputValue, id) {
+  const markup = `<li style="display:flex"><p>${inputValue}</p><button data-id ="${id}" type="button">Delete</button></li>`;
 
-    refs.list.insertAdjacentHTML('beforeend', markup)
+  refs.list.insertAdjacentHTML("beforeend", markup);
+}
+
+function onDeteteClick(e) {
+  if (e.target.nodeName !== "BUTTON") {
+    return;
+  }
+  e.target.closest("li").remove();
+  const id = e.target.dataset.id;
+
+  const storageData = JSON.parse(localStorage.getItem("userData"));
+  const newData = storageData.filter((obj) => String(obj.id) !== id);
+  console.log(newData);
+  localStorage.setItem("userData", JSON.stringify(newData));
 }
