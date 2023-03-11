@@ -592,7 +592,7 @@ const refs = {
 refs.form.addEventListener("submit", onTaskFormSubmit);
 refs.list.addEventListener("click", onDeteteClick);
 
-const userData = [];
+let userData = [];
 
 function onTaskFormSubmit(e) {
   e.preventDefault();
@@ -606,9 +606,8 @@ function onTaskFormSubmit(e) {
   e.target.reset();
 }
 
-function render(inputValue, id) {
-  const markup = `<li style="display:flex"><p>${inputValue}</p><button data-id ="${id}" type="button">Delete</button></li>`;
-
+function render(text, id) {
+  const markup = createMarkupItem({ text, id });
   refs.list.insertAdjacentHTML("beforeend", markup);
 }
 
@@ -621,6 +620,18 @@ function onDeteteClick(e) {
 
   const storageData = JSON.parse(localStorage.getItem("userData"));
   const newData = storageData.filter((obj) => String(obj.id) !== id);
-  console.log(newData);
+
   localStorage.setItem("userData", JSON.stringify(newData));
+}
+
+function renderLocalStorage() {
+  let savedData = JSON.parse(localStorage.getItem("userData"));
+  const markup = savedData.map(createMarkupItem).join("");
+  refs.list.insertAdjacentHTML("beforeend", markup);
+  userData = savedData;
+}
+renderLocalStorage();
+
+function createMarkupItem({ text, id }) {
+  return `<li style="display:flex"><p>${text}</p><button data-id ="${id}" type="button">Delete</button></li>`;
 }
