@@ -582,56 +582,72 @@
  * Список з задачами має бути доступним післе перезавантаження сторінки.
  */
 
-const refs = {
-  form: document.querySelector("#task-form"),
-  input: document.querySelector("input"),
-  button: document.querySelector("button"),
-  list: document.querySelector("#task-list"),
-};
+// const refs = {
+//   form: document.querySelector("#task-form"),
+//   input: document.querySelector("input"),
+//   button: document.querySelector("button"),
+//   list: document.querySelector("#task-list"),
+// };
 
-refs.form.addEventListener("submit", onTaskFormSubmit);
-refs.list.addEventListener("click", onDeteteClick);
+// refs.form.addEventListener("submit", onTaskFormSubmit);
+// refs.list.addEventListener("click", onDeteteClick);
 
-let userData = [];
+// let userData = [];
 
-function onTaskFormSubmit(e) {
-  e.preventDefault();
-  const inputValue = e.currentTarget.elements.taskName.value;
+// function onTaskFormSubmit(e) {
+//   e.preventDefault();
+//   const inputValue = e.currentTarget.elements.taskName.value;
 
-  const id = Date.now();
-  const task = { id, text: inputValue };
-  render(inputValue, id);
-  userData.push(task);
-  localStorage.setItem("userData", JSON.stringify(userData));
-  e.target.reset();
+//   const id = Date.now();
+//   const task = { id, text: inputValue };
+//   render(inputValue, id);
+//   userData.push(task);
+//   localStorage.setItem("userData", JSON.stringify(userData));
+//   e.target.reset();
+// }
+
+// function render(text, id) {
+//   const markup = createMarkupItem({ text, id });
+//   refs.list.insertAdjacentHTML("beforeend", markup);
+// }
+
+// function onDeteteClick(e) {
+//   if (e.target.nodeName !== "BUTTON") {
+//     return;
+//   }
+//   e.target.closest("li").remove();
+//   const id = e.target.dataset.id;
+
+//   const storageData = JSON.parse(localStorage.getItem("userData"));
+//   const newData = storageData.filter((obj) => String(obj.id) !== id);
+
+//   localStorage.setItem("userData", JSON.stringify(newData));
+// }
+
+// function renderLocalStorage() {
+//   let savedData = JSON.parse(localStorage.getItem("userData"));
+//   const markup = savedData.map(createMarkupItem).join("");
+//   refs.list.insertAdjacentHTML("beforeend", markup);
+//   userData = savedData;
+// }
+// renderLocalStorage();
+
+// function createMarkupItem({ text, id }) {
+//   return `<li style="display:flex"><p>${text}</p><button data-id ="${id}" type="button">Delete</button></li>`;
+// }
+/**
+ * ЗАДАЧА 1
+ * Перероби функцію на проміс таким чином, щоб проміс повертав значення
+ * через 2 секунди після виклику функції
+ */
+
+function greet() {
+  new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    resolve("hello world")
+  }, 2000)
+  }).then(ref => { console.log(ref); return ref }).then(console.log)
 }
 
-function render(text, id) {
-  const markup = createMarkupItem({ text, id });
-  refs.list.insertAdjacentHTML("beforeend", markup);
-}
+greet();
 
-function onDeteteClick(e) {
-  if (e.target.nodeName !== "BUTTON") {
-    return;
-  }
-  e.target.closest("li").remove();
-  const id = e.target.dataset.id;
-
-  const storageData = JSON.parse(localStorage.getItem("userData"));
-  const newData = storageData.filter((obj) => String(obj.id) !== id);
-
-  localStorage.setItem("userData", JSON.stringify(newData));
-}
-
-function renderLocalStorage() {
-  let savedData = JSON.parse(localStorage.getItem("userData"));
-  const markup = savedData.map(createMarkupItem).join("");
-  refs.list.insertAdjacentHTML("beforeend", markup);
-  userData = savedData;
-}
-renderLocalStorage();
-
-function createMarkupItem({ text, id }) {
-  return `<li style="display:flex"><p>${text}</p><button data-id ="${id}" type="button">Delete</button></li>`;
-}
