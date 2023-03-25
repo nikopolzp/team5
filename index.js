@@ -641,13 +641,14 @@
  * через 2 секунди після виклику функції
  */
 
-function greet() {
-  new Promise((resolve,reject)=>{
-  setTimeout(()=>{
-    resolve("hello world")
-  }, 2000)
-  }).then(ref => { console.log(ref); return ref }).then(console.log)
-}
+// function greet() {
+//   new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve("hello world")
+//   }, 2000)
+//   }).then(ref => { console.log(ref); return ref }).then(console.log)
+// }
 
-greet();
+// greet();
 
+// ================================25.03.23==========================================================
