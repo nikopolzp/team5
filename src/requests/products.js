@@ -7,3 +7,7 @@ export function getAllProducts() {
 export function getProductById(id) {
   return apiDummyJson.get(`/products/${id}`);
 }
+
+export function createProduct(data) {
+  return apiDummyJson.post("/products/add", data);
+}
